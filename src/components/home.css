@@ -1,0 +1,123 @@
+.home-container {
+  background: rgb(20, 22, 26);
+  height: 150vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+    padding-top: 80px;
+}
+
+.glass-card {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.cut-text {
+  font-weight: bold;
+  color: black;
+  text-align: center;
+  font-size: 2.5rem;
+  opacity: 50;
+}
+
+.big-name {
+  font-size: 20vw !important; 
+  color: black;
+  text-align: center;
+  font-size: 2.5rem;
+  opacity: 50;
+}
+
+.navbar {
+  background: rgb(20, 22, 26) !important;
+  box-shadow: none;
+}
+
+.cursor {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s ease-out;
+  z-index: 10000;
+
+
+  box-shadow: 0 0 40px rgba(0, 140, 255, 0.8),
+    0 0 80px rgba(0, 140, 255, 0.6),
+    0 0 120px rgba(0, 140, 255, 0.4);
+}
+
+body {
+  cursor: none;
+  background: rgb(20, 22, 26);
+  margin: 0;
+}
+
+.spotlight {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  --x: 100%;
+  --y: 100%;
+
+  /* Make it dim instead of fully invisible */
+  -webkit-mask-image: radial-gradient(
+    circle 150px at var(--x) var(--y),
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0.4) 100%   /* instead of 0, keep partial visibility */
+  );
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-composite: destination-in;
+
+  mask-image: radial-gradient(
+    circle 150px at var(--x) var(--y),
+    rgba(0, 0, 0, 1) 70%,
+    rgba(0, 0, 0, 0.4) 100%   /* keep text slightly visible */
+  );
+  mask-repeat: no-repeat;
+}
+
+
+.bottom-lists {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  padding: 2rem 4rem;
+  color: #aaa;
+  font-size: 1rem;
+  font-family: "Inter", sans-serif;
+  background: #0a0a0a; 
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.bottom-lists ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 400px;
+}
+
+.bottom-lists li {
+  margin-bottom: 0.6rem;
+  line-height: 1.6;
+  opacity: 0.8;
+}
+
+.bottom-lists .highlight {
+  color: #e4572e; 
+  font-weight: 600;
+}
+
+.white-divider {
+  background-color: white !important;
+  height: 2px !important; 
+  opacity: 1 !important;  
+}
+
